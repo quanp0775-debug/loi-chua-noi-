@@ -9,7 +9,22 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Playpen Sans', cursive;}
 body{overflow:hidden;}
+@keyframes fadeInLetter{
 
+    from{
+        opacity:0;
+        transform:translate(-50%,-45%);
+    }
+
+    to{
+        opacity:1;
+        transform:translate(-50%,-50%);
+    }
+}
+
+.showLetter{
+    animation:fadeInLetter 0.8s ease;
+}
 #loginPage{
     width:100vw;height:100vh;background:#c8a27a;
     display:flex;justify-content:center;align-items:center;
