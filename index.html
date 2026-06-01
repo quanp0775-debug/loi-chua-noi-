@@ -292,8 +292,18 @@ for(let i=0;i<45;i++){
     bear.style.left =
     Math.random()*100 + "vw";
 
+ const randomSize = Math.random();
+
+if(randomSize < 0.15){
+    bear.style.fontSize = "120px";
+}
+else if(randomSize < 0.35){
+    bear.style.fontSize = "90px";
+}
+else{
     bear.style.fontSize =
-    (45 + Math.random()*20) + "px";
+    (40 + Math.random()*30) + "px";
+}
 
     bear.style.animationDuration =
     (5 + Math.random()*4) + "s";
