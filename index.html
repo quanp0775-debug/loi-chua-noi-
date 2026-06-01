@@ -67,23 +67,15 @@ button{
 @keyframes bearFloat{
 
     0%{
-        transform:translate(0,0) rotate(-8deg);
-    }
-
-    25%{
-        transform:translate(20px,-30vh) rotate(5deg);
+        transform:translate(0,0);
     }
 
     50%{
-        transform:translate(-20px,-60vh) rotate(-5deg);
-    }
-
-    75%{
-        transform:translate(15px,-95vh) rotate(8deg);
+        transform:translate(10px,-65vh);
     }
 
     100%{
-        transform:translate(-10px,-130vh) rotate(-8deg);
+        transform:translate(0,-130vh);
     }
 }
 
@@ -285,10 +277,10 @@ for(let i=0;i<18;i++){
     let bear=document.createElement("div");
     bear.className="bear";
     bear.innerHTML="🧸";
-    bear.style.fontSize =
-(40 + Math.random()*40) + "px";
+   bear.style.fontSize =
+(45 + Math.random()*20) + "px";
     bear.style.left=Math.random()*100+"vw";
-    bear.style.animationDuration=(2+Math.random()*3)+"s";
+    bear.style.animationDuration=(4+Math.random()*)+"s";
     bear.style.animationDelay=Math.random()*10+"s";
     document.getElementById("loginPage").appendChild(bear);
 }
