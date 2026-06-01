@@ -301,9 +301,9 @@ function createBear(){
     document.getElementById("loginPage")
     .appendChild(bear);
 
-    setTimeout(()=>{
+bear.addEventListener("animationend", () => {
     bear.remove();
-},20000);
+});
 }
 
 for(let i=0;i<20;i++){
