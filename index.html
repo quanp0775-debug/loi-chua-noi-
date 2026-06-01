@@ -281,16 +281,28 @@ function openLetter(){
     document.getElementById("letter").style.display="block";
 }
 
-for(let i=0;i<40;i++){
-    let bear=document.createElement("div");
-    bear.className="bear";
-    bear.innerHTML="🧸";
-   bear.style.fontSize =
-(45 + Math.random()*20) + "px";
-    bear.style.left=Math.random()*100+"vw";
-    bear.style.animationDuration=(4+Math.random()*6)+"s";
-    bear.style.animationDelay=Math.random()*2+"s";
-    document.getElementById("loginPage").appendChild(bear);
+for(let i=0;i<45;i++){
+
+    let bear = document.createElement("div");
+
+    bear.className = "bear";
+
+    bear.innerHTML = "🧸";
+
+    bear.style.left =
+    Math.random()*100 + "vw";
+
+    bear.style.fontSize =
+    (45 + Math.random()*20) + "px";
+
+    bear.style.animationDuration =
+    (5 + Math.random()*4) + "s";
+
+    bear.style.animationDelay =
+    Math.random()*2 + "s";
+
+    document.getElementById("loginPage")
+    .appendChild(bear);
 }
 
 for(let i=0;i<30;i++){
