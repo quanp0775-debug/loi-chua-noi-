@@ -65,8 +65,26 @@ button{
 }
 
 @keyframes bearFloat{
-    from{transform:translateY(0);}
-    to{transform:translateY(-130vh);}
+
+    0%{
+        transform:translate(0,0) rotate(-8deg);
+    }
+
+    25%{
+        transform:translate(20px,-30vh) rotate(5deg);
+    }
+
+    50%{
+        transform:translate(-20px,-60vh) rotate(-5deg);
+    }
+
+    75%{
+        transform:translate(15px,-95vh) rotate(8deg);
+    }
+
+    100%{
+        transform:translate(-10px,-130vh) rotate(-8deg);
+    }
 }
 
 #envelopePage{
@@ -267,6 +285,8 @@ for(let i=0;i<18;i++){
     let bear=document.createElement("div");
     bear.className="bear";
     bear.innerHTML="🧸";
+    bear.style.fontSize =
+(40 + Math.random()*40) + "px";
     bear.style.left=Math.random()*100+"vw";
     bear.style.animationDuration=(2+Math.random()*3)+"s";
     bear.style.animationDelay=Math.random()*10+"s";
