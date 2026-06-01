@@ -319,6 +319,18 @@ for(let i=0;i<30;i++){
     let balloon=document.createElement("div");
     balloon.className="balloon";
     balloon.innerHTML="🎈";
+    const randomSize = Math.random();
+
+if(randomSize < 0.15){
+    balloon.style.fontSize = "120px";
+}
+else if(randomSize < 0.35){
+    balloon.style.fontSize = "90px";
+}
+else{
+    balloon.style.fontSize =
+    (40 + Math.random()*30) + "px";
+}
     balloon.style.left=Math.random()*100+"vw";
     balloon.style.animationDuration=(8+Math.random()*10)+"s";
     balloon.style.animationDelay=Math.random()*8+"s";
