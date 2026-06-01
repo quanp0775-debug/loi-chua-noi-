@@ -281,7 +281,7 @@ function openLetter(){
     document.getElementById("letter").style.display="block";
 }
 
-for(let i=0;i<45;i++){
+function createBear(){
 
     let bear = document.createElement("div");
 
@@ -292,28 +292,25 @@ for(let i=0;i<45;i++){
     bear.style.left =
     Math.random()*100 + "vw";
 
- const randomSize = Math.random();
-
-if(randomSize < 0.15){
-    bear.style.fontSize = "120px";
-}
-else if(randomSize < 0.35){
-    bear.style.fontSize = "90px";
-}
-else{
     bear.style.fontSize =
-    (40 + Math.random()*30) + "px";
-}
+    (45 + Math.random()*35) + "px";
 
     bear.style.animationDuration =
-    (5 + Math.random()*4) + "s";
-
-    bear.style.animationDelay =
-    Math.random()*2 + "s";
+    (6 + Math.random()*4) + "s";
 
     document.getElementById("loginPage")
     .appendChild(bear);
+
+    setTimeout(()=>{
+        bear.remove();
+    },10000);
 }
+
+for(let i=0;i<20;i++){
+    createBear();
+}
+
+setInterval(createBear,500);
 
 for(let i=0;i<30;i++){
     let balloon=document.createElement("div");
